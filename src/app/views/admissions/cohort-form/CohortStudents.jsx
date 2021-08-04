@@ -225,7 +225,7 @@ const CohortStudents = ({ slug, cohortId }) => {
                       select
                     >
                       {['NONE', 'FULLY_PAID', 'UP_TO_DATE', 'LATE'].map((item) => (
-                        <MenuItem value={item} key={item}>
+                        <MenuItem value={item} key={item} aria-disabled={item === 'NONE' ? 'true' : 'false'}>
                           {item}
                         </MenuItem>
                       ))}
